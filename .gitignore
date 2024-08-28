@@ -1,0 +1,4 @@
+bin/
+obj/
+*.csproj
+.DS_Store
