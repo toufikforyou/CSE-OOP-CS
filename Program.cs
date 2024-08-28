@@ -1,6 +1,20 @@
 ﻿using System;
 public partial class Program
 {
+    public static void Main(string[] args)
+    {
+        Student std = new Student("Toufik", 21, 3.42);
+
+        Student std2 = new Student();
+
+        std2.Name = "Toufik Hasan";
+        std2.Age = 20;
+        std2.Grade = 3.29;
+
+        std.Display();
+
+        std2.Display();
+    }
 
     /*
         public static void Main(string[] args)
@@ -136,64 +150,4 @@ public partial class Program
             }
         }
     */
-
-
-    public class Student
-    {
-        private string name = "";
-        private int age = 0;
-        private double grade = 4.00;
-
-        public Student(string name, int age, double grade)
-        {
-            this.name = name;
-            this.age = age;
-            this.grade = grade;
-        }
-
-        public Student()
-        {
-
-        }
-
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public int Age
-        {
-            get { return age; }
-            set { age = value; }
-        }
-
-        public double Grade
-        {
-            get { return grade; }
-            set { grade = value; }
-        }
-
-        public void Display()
-        {
-
-            Console.WriteLine($"{name} {age} {grade}");
-        }
-    }
-
-    public static void Main(string[] args)
-    {
-        Student std = new Student("Toufik", 21, 3.42);
-
-
-        Student std2 = new Student();
-
-        std2.Name = "Toufik Hasan";
-        std2.Age = 20;
-        std2.Grade = 3.29;
-
-        std.Display();
-
-        std2.Display();
-    }
 }
